@@ -1,0 +1,18 @@
+
+  <% provide(:title, "Log in") %>
+
+  <div class="col-4">
+  <h4>Welcome to Sylvester!</h4>
+  <%= form_for(:session, url: login_path) do |f| %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %><br>
+
+  <%= f.submit "Log in", class: "btn btn-primary" %><br>
+  <%= flash.now[:warning]%>
+  <% end %>
+  <p>New user? <%= link_to "Sign up now!", 'users/new' %></p>
+</div>

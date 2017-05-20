@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<div class="container">
+<head>
+  <title>SylvesterTech</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</div>
+</head>
+<body>
+<div class="container">
+	<%= image_tag("intro-9.png") %>
+	<%= yield %>
+</div>
+</body>
+</html>

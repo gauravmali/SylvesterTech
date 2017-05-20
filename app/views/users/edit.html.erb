@@ -1,0 +1,24 @@
+<div class="container">
+<% provide(:title, 'Edit user') %>
+<h4>Update your profile</h4>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+    <%= render 'shared/error_messages' %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+
+      <%= f.label :dob %>
+      <%= f.date_field :dob, class: 'form-control' %>
+
+      <%= f.label :status %>
+      <%= f.text_area :status, class: 'form-control' %></br>
+
+      <%= f.submit "Update my account", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+</div>
+</div>

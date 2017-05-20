@@ -1,0 +1,8 @@
+<div class="col-4">
+	<h4>Welcome <%= @user.name %>!</h4>
+	Email: <%= @user.email %> <br>
+	Date of Birth: <%= @user.dob %> <br>
+	One Line Status: <%= @user.status %> <br>
+	<%= link_to "Edit", edit_user_path(@user) %>
+	<%= link_to "Log out", logout_path, method: :delete %>
+</div>
